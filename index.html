@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice By Piyal</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-area" class="login-zone">
+            <h1 class="text-center">Welcome To Luck World</h1>
+            <div class="submit-arean text-center">
+                <h4>Let's Check Your Luck</h4>
+                <br>
+                <div class="lucky-box">
+                    <h2 id="lucky-number">00</h2>
+                </div>
+                <br>
+                <input onClick="this.disabled = true;" id="lucky-btn" class="btn btn-outline-secondary" type="submit" value="Check Your Luck">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright text-center">
+            <p>Design & Developed By <a href="http://wpexpertpiyal.com">Piyal Shah</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const luckBtn = document.getElementById("lucky-btn");
+        luckBtn.addEventListener("click", function(){
+            var dice = Math.random() * 38;
+
+            var randomNum = Math.round(dice);
+
+            console.log(randomNum);
+
+            const luckyBox = document.getElementById("lucky-number").innerText;
+            const luckyBoxNumber = parseFloat(luckyBox);
+            const finalNumber = randomNum;
+            document.getElementById("lucky-number").innerText = finalNumber;
+        });
+    </script>
+</body>
+</html>
