@@ -34,10 +34,7 @@
         const luckBtn = document.getElementById("lucky-btn");
         luckBtn.addEventListener("click", function(){
             var dice = Math.random() * 38;
-
             var randomNum = Math.round(dice);
-
-            console.log(randomNum);
 
             const luckyBox = document.getElementById("lucky-number").innerText;
             const luckyBoxNumber = parseFloat(luckyBox);
